@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/shopify/static/css/main.71251da3.css",
+    "main.js": "/shopify/static/js/main.6d515592.js",
+    "static/js/206.f91ec9e7.chunk.js": "/shopify/static/js/206.f91ec9e7.chunk.js",
+    "index.html": "/shopify/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.71251da3.css",
+    "static/js/main.6d515592.js"
+  ]
+}
