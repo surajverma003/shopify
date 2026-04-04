@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sasta-mart/static/css/main.34adf323.css",
-    "main.js": "/sasta-mart/static/js/main.7038c424.js",
+    "main.js": "/sasta-mart/static/js/main.44b7cf15.js",
     "static/js/453.ba54fc6d.chunk.js": "/sasta-mart/static/js/453.ba54fc6d.chunk.js",
     "index.html": "/sasta-mart/index.html",
     "main.34adf323.css.map": "/sasta-mart/static/css/main.34adf323.css.map",
-    "main.7038c424.js.map": "/sasta-mart/static/js/main.7038c424.js.map",
+    "main.44b7cf15.js.map": "/sasta-mart/static/js/main.44b7cf15.js.map",
     "453.ba54fc6d.chunk.js.map": "/sasta-mart/static/js/453.ba54fc6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34adf323.css",
-    "static/js/main.7038c424.js"
+    "static/js/main.44b7cf15.js"
   ]
 }
