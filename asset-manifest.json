@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/shopify/static/css/main.71251da3.css",
-    "main.js": "/shopify/static/js/main.6d515592.js",
-    "static/js/206.f91ec9e7.chunk.js": "/shopify/static/js/206.f91ec9e7.chunk.js",
-    "index.html": "/shopify/index.html"
+    "main.css": "/sasta-mart/static/css/main.34adf323.css",
+    "main.js": "/sasta-mart/static/js/main.7038c424.js",
+    "static/js/453.ba54fc6d.chunk.js": "/sasta-mart/static/js/453.ba54fc6d.chunk.js",
+    "index.html": "/sasta-mart/index.html",
+    "main.34adf323.css.map": "/sasta-mart/static/css/main.34adf323.css.map",
+    "main.7038c424.js.map": "/sasta-mart/static/js/main.7038c424.js.map",
+    "453.ba54fc6d.chunk.js.map": "/sasta-mart/static/js/453.ba54fc6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71251da3.css",
-    "static/js/main.6d515592.js"
+    "static/css/main.34adf323.css",
+    "static/js/main.7038c424.js"
   ]
 }
