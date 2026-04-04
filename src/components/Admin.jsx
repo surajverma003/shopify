@@ -203,7 +203,14 @@ const Admin = () => {
                             <label htmlFor="category" className="mb-2 text-sm font-bold text-gray-900 dark:text-gray-300 flex items-center gap-2">
                                 <Icon icon="mdi:shape" className="text-lg text-purple-600 dark:text-purple-400"></Icon> Category ID
                             </label>
-                            <input type="number" id="category" name='category' className="block p-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-sm focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-600 focus:border-transparent outline-none transition-all placeholder-gray-500 dark:placeholder-gray-400 dark:text-white" min={1} max={100} placeholder="1. Clothes | 2. Electronics | 3. Furniture | 4. Shoes | 5. Miscellaneous" required onChange={onchange} />
+                            <select type="number" id="category" name='category' className="block p-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-sm focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-600 focus:border-transparent outline-none transition-all placeholder-gray-500 dark:placeholder-gray-400 dark:text-white" min={1} max={100} placeholder="" required onChange={onchange}>
+                                <option value="1">None</option>
+                                <option value="1">Clothes</option>
+                                <option value="2">Electronics</option>
+                                <option value="3">Furniture</option>
+                                <option value="4">Shoes</option>
+                                <option value="5">Miscellaneous</option>
+                            </select>
                         </div>
 
                         {/* Enhanced Image Upload Section */}

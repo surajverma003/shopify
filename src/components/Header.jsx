@@ -79,9 +79,9 @@ const Header = () => {
                         </div>
                         <div className="hidden sm:block">
                             <span className="text-xl lg:text-2xl font-black tracking-tight text-zinc-900 dark:text-white">
-                                Shop<span className="text-purple-600">ify</span>
+                                Sasta<span className="text-purple-600">Mart</span>
                             </span>
-                            <p className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase -mt-0.5">Premium Store</p>
+                            <p className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase -mt-0.5">Shop Fast. Save More.</p>
                         </div>
                     </Link>
 

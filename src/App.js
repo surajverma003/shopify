@@ -25,9 +25,12 @@ import Profile from './components/Profile';
 import Wishlist from './components/Wishlist';
 import HelpSupport from './components/HelpSupport';
 
+import PrivacyPolicy from "./reuse/PrivacyPolicy";
+import TermsOfService from "./reuse/TermsOfService";
+
 const App = () => {
     return (
-        <BrowserRouter basename='/shopify'>
+        <BrowserRouter basename='/sasta-mart'>
             <ContextState>
                 <ScrollToTop />
                 <ToastContainer />
@@ -46,6 +49,9 @@ const App = () => {
                     <Route exact path='/wishlist' element={<Wishlist />} />
                     <Route exact path='/product/:id' element={<ProductDetail />} />
                     <Route exact path='/help' element={<HelpSupport />} />
+                    
+                    <Route exact path='/privacy' element={<PrivacyPolicy />} />
+                    <Route exact path='/terms' element={<TermsOfService />} />
 
                     <Route exact path='/login' element={<Login />} />
                     <Route exact path='/register' element={<Register />} />

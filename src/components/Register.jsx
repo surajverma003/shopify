@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import myContext from '../context/myContext';
 
 const Register = () => {
@@ -21,31 +20,50 @@ const Register = () => {
 
         try {
             let avatar = 'https://api.dicebear.com/7.x/avataaars/svg?seed=default';
+
+            // 1. Handle File Upload
             if (selectedFile) {
                 const formData = new FormData();
                 formData.append('file', selectedFile);
 
-                const response = await axios.post('https://api.escuelajs.co/api/v1/files/upload', formData, {
-                    headers: { 'Content-Type': 'multipart/form-data' },
+                const fileResponse = await fetch('https://api.escuelajs.co/api/v1/files/upload', {
+                    method: 'POST',
+                    body: formData, // Fetch khud hi 'multipart/form-data' boundary set kar leta hai
                 });
-                avatar = response.data.location;
+
+                if (!fileResponse.ok) throw new Error('File upload failed');
+
+                const fileData = await fileResponse.json();
+                avatar = fileData.location;
             }
 
-            const userInfo = { "name": e.target.name.value, "email": e.target.email.value, "password": e.target.password.value, "avatar": avatar, };
-            const response = await axios.post('https://api.escuelajs.co/api/v1/users/', userInfo);
+            // 2. Handle User Creation
+            const userInfo = { "name": e.target.name.value, "email": e.target.email.value, "password": e.target.password.value, "avatar": avatar };
 
+            const response = await fetch('https://api.escuelajs.co/api/v1/users/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userInfo),
+            });
+
+            // 3. Status Check (Fetch mein response.status check karna padta hai)
             if (response.status === 201) {
+                response.json();
                 notify("Account created successfully! Redirecting to login...", "success");
                 e.target.reset();
                 if (typeof removeFile === 'function') removeFile();
                 setTimeout(() => { navigate('/login', { replace: true }); }, 3000);
             } else {
+                const errorData = await response.json();
+                console.error("Server Error:", errorData);
                 notify("Failed to create account. Please try again.", "error");
             }
 
         } catch (error) {
-            console.error("Registration error:", error.response?.data || error.message);
-            notify("Failed to create account. Please try again.","error");
+            console.error("Registration error:", error.message);
+            notify("Failed to create account. Please try again.", "error");
         } finally {
             setLoading(false);
         }

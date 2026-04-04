@@ -63,7 +63,7 @@ const Home = () => {
 
             {/* Store Component Section */}
             <div className="py-20 pt-0 lg:pt-20 bg-white dark:bg-gray-950">
-                <StoreComp title="Online Store" image="/online-store.png" />
+                <StoreComp title="Online Store" image="/sasta-mart/online-store.png" />
             </div>
 
             {/* Featured Products Section */}
