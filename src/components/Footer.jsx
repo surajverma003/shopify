@@ -33,7 +33,7 @@ const Footer = () => {
                             </div>
                             <div className="hidden sm:block">
                                 <span className="text-xl lg:text-2xl font-black tracking-tight text-zinc-900 dark:text-white">
-                                    Sasta<span className="text-purple-600">Mart</span>
+                                    Shop<span className="text-purple-600">ify</span>
                                 </span>
                                 <p className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase -mt-0.5">Shop Fast. Save More.</p>
                             </div>
@@ -104,7 +104,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
-                        © {new Date().getFullYear()} <span className="font-bold text-gray-900 dark:text-white">Sasta Mart</span>. All rights reserved.
+                        © {new Date().getFullYear()} <span className="font-bold text-gray-900 dark:text-white">Shopify</span>. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
                         <Link to="/privacy" className="text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Privacy Policy</Link>

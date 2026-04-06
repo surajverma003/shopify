@@ -30,7 +30,7 @@ import TermsOfService from "./reuse/TermsOfService";
 
 const App = () => {
     return (
-        <BrowserRouter basename='/sasta-mart'>
+        <BrowserRouter basename='/shopify'>
             <ContextState>
                 <ScrollToTop />
                 <ToastContainer />
