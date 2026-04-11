@@ -26,7 +26,7 @@ const StoreComp = ({ title, image }) => {
 
                     {/* Image with Decorative Background */}
                     <div className="relative group">
-                        <img src={image} className="relative z-10 rounded-2xl shadow-2xl dark:shadow-purple-500/10 pt-10 pe-10 lg:pt-12 lg:pe-12 transition-transform duration-500 group-hover:scale-105" alt={title} />
+                        <img src={`${`/${window.location.pathname.split("/")[1]}${image}`}`} className="relative z-10 rounded-2xl shadow-2xl dark:shadow-purple-500/10 pt-10 pe-10 lg:pt-12 lg:pe-12 transition-transform duration-500 group-hover:scale-105" alt={title} />
                         <div className="absolute top-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-purple-700 dark:to-pink-700 rounded-2xl -z-0 group-hover:rotate-6 transition-transform duration-500"></div>
                         <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-200 dark:bg-purple-900/30 rounded-full blur-3xl -z-10"></div>
                     </div>

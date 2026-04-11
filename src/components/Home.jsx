@@ -9,14 +9,12 @@ import Card from '../reuse/Card';
 
 const Home = () => {
     const context = useContext(myContext);
-    const { products, loading, fetchData, navigate, loggedInUser } = context;
+    const { products, loading, fetchData, navigate } = context;
 
     useEffect(() => {
-        if (loggedInUser) {
-            fetchData();
-        }
+        fetchData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [navigate, loggedInUser]);
+    }, [navigate]);
 
     return (
         <>
@@ -63,7 +61,7 @@ const Home = () => {
 
             {/* Store Component Section */}
             <div className="py-20 pt-0 lg:pt-20 bg-white dark:bg-gray-950">
-                <StoreComp title="Online Store" image="/sasta-mart/online-store.png" />
+                <StoreComp title="Online Store" image="/online-store.png" />
             </div>
 
             {/* Featured Products Section */}
